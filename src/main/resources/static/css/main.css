@@ -1,0 +1,12 @@
+div {
+	margin: .35rem 0;
+}
+
+label {
+	font-weight: medium;
+}
+
+legend {
+	font-size: 18px;
+	font-weight: bold;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employee Details</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <fieldset th:object="${employee}">
+        <legend>Employee Details</legend>
+        <div>
+            <p>
+                Name: <span th:text="*{name}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Date of Birth: <span th:text="*{dateOfBirth}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Gender: <span th:text="*{gender}"></span>
+            </p>
+        </div>
+        <br />
+        <div>
+            <strong>Address: </strong>
+        </div>
+        <div>
+            <p>
+                Line 1: <span th:text="*{addressLine1}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Line 2: <span th:text="*{addressLine2}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Country: <span th:text="*{country}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                State: <span th:text="*{state}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                City: <span th:text="*{city}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Zip Code: <span th:text="*{zipCode}"></span>
+            </p>
+        </div>
+        <br />
+        <div>
+            <p>
+                Mobile: <span th:text="*{mobile}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Email: <span th:text="*{email}"></span>
+            </p>
+        </div>
+        <div>
+            <label for="skills">Skills: </label>
+            <div th:each="skill : *{skills}">
+                <span  th:text="${skill}"></span>
+            </div>
+        </div>
+        <div>
+            <p>
+                Bio: <span th:text="*{biography}"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                Website: <a th:href="@{*{website}}"> Bio</a>
+            </p>
+        </div>
+    </fieldset>
+</body>
+</html>

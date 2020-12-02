@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employee Details</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="/form" method="post">
+        <fieldset>
+            <legend>Employee Details</legend>
+            <div>
+                <label for="name">Name: </label>
+                <input name="name" type="text">
+            </div>
+            <div>
+                <label for="dateOfBirth">Date of Birth: </label>
+                <input name="dateOfBirth" type="date">
+            </div>
+            <div>
+                <label>Gender: </label>
+                <label for="optionMale">
+                    <input id="optionMale" type="radio" name="gender" value="male" checked>
+                    Male
+                </label>
+                <label for="optionFemale">
+                    <input id="optionFemale" type="radio" name="gender" value="female">
+                    Female
+                </label>
+            </div>
+            <br />
+            <div>
+                <strong>Address: </strong>
+            </div>
+            <div>
+                <label for="addressLine1">Line 1: </label>
+                <input name="addressLine1" type="text">
+            </div>
+            <div>
+                <label for="addressLine2">Line 2: </label>
+                <input name="addressLine2" type="text">
+            </div>
+            <div>
+                <label for="country">Country: </label>
+                <select name="country" id="country">
+                    <option value="country1" selected>Country 1</option>
+                    <option value="country2">Country 2</option>
+                    <option value="country3">Country 3</option>
+                    <option value="country4">Country 4</option>
+                    <option value="country5">Country 5</option>
+                </select>
+            </div>
+            <div>
+                <label for="state">State: </label>
+                <select name="state" id="state">
+                    <option value="state1" selected>State 1</option>
+                    <option value="state2">State 2</option>
+                    <option value="state3">State 3</option>
+                    <option value="state4">State 4</option>
+                    <option value="state5">State 5</option>
+                </select>
+            </div>
+            <div>
+                <label for="city">City: </label>
+                <select name="city">
+                    <option value="city1" selected>City 1</option>
+                    <option value="city2">City 2</option>
+                    <option value="city3">City 3</option>
+                    <option value="city4">City 4</option>
+                    <option value="city5">City 5</option>
+                </select>
+            </div>
+            <div>
+                <label for="zipCode">Zip Code: </label>
+                <input name="zipCode" type="number">
+            </div>
+            <br />
+            <div>
+                <label for="mobile">Mobile: </label>
+                <input name="mobile" type="number">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input name="email" type="email">
+            </div>
+            <div>
+                <label for="skills">Skills: </label>
+                <select name="skills" multiple>
+                    <option value="skill1" selected>Skill 1</option>
+                    <option value="skill1">Skill 2</option>
+                    <option value="skill1">Skill 3</option>
+                </select>
+            </div>
+            <div>
+                <label for="biography">Bio: </label>
+                <textarea name="biography" cols="" rows=""></textarea>
+            </div>
+            <div>
+                <label for="website">Website: </label>
+                <input name="website" type="url">
+            </div>
+            <br />
+            <div>
+                <input type="reset" value="Reset" />
+                <input type="submit" value="Submit" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
